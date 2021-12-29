@@ -1,0 +1,32 @@
+
+<html>
+        <head>
+            <title>Inventory|Dashboard</title>
+        </head>
+        <body>
+            <h1 style='background-color:MediumSeaGreen'><i>Inventory Dashboard</i></h1>
+            <a href="/add">Add Product</a>
+            <table border="1" align="center">
+                <tr style='background-color:LightGray'>
+                    <th>Product Name</th>  
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Date</th>
+                    <th>Edit</th>
+                    <th>Delete</th>         
+                </tr>
+                
+            {%for x in details:%}   
+                <tr> 
+                    <td>{{x.1}}</td>
+                    <td>{{x.2}}</td>
+                    <td>{{x.3}}</td>
+                    <td>{{x.4}}</td>
+                    <td><a href="/edit/{{x.0}}">Edit</a></td>
+                    <td><a href="/delete/{{x.0}}">Delete</a></td>
+                </tr>
+            {%endfor%}
+            </table>
+        </body>
+</html>
+

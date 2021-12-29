@@ -1,0 +1,41 @@
+
+<html>
+        <head>
+            <title>Inventory|Add</title>
+        </head>
+        <body>
+            <h1 style='background-color:MediumSeaGreen'><i>Update Product</i></h1>
+            <form method="POST" action="/update">    
+                <table border='1' align='center'>
+                  <tr>  
+                      <td> <input type='hidden' name='id' value='{{details.0}}'> </td>
+                  </tr>
+                  
+                  <tr>
+                      <td style='background-color:LightGray'>Product Name:</td>
+                      <td> <input type='text' name='name' value='{{details.1}}'> </td>
+                  </tr>
+                  
+                  <tr>
+                      <td style='background-color:LightGray'>Price:</td>
+                      <td> <input type='number' name='price' value='{{details.2}}'> </td>
+                  </tr>
+                  
+                  <tr>
+                      <td style='background-color:LightGray'>Quantity:</td>
+                      <td> <input type='number' name='quantity' value='{{details.3}}'> </td>
+                  </tr>
+                  
+                  <tr>
+                      <td style='background-color:LightGray'>Date:</td>
+                      <td> <input type='date' name='date' value='{{details.4}}'</td>
+                  </tr>
+                  
+                  <tr>
+                      <td> <input type='submit' name='send' value='Update Product'</td>
+                  </tr>
+                </table>
+            </form>
+        </body>
+</html>
+
